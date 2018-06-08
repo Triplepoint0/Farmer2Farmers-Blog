@@ -1,0 +1,8 @@
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h6 class="card-title"><%= @post.title %><p>Date: <%= @post.created_at.strftime("%b %d, %Y") %></p> </h6>
+    <h5 class="card-subtitle mb-2 text-muted">By: <%= @user.username %></h5>
+    <p class="card-text"><%= @post.body %></p>
+  </div>
+</div>

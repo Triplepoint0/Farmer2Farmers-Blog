@@ -1,0 +1,24 @@
+<section >
+<br>
+<center>
+<h2 align="">Welcome back <%= @username.username %>!</h2>
+</center>
+
+<div align="center">
+<% @posts.first(20).reverse.each do |post| %>
+    <ol>
+   <a href="/post/<%= post.id %>"><%= post.title %></a> | <%= post.created_at %> | Posted By: <%= post.user.username %>
+        </ol>
+<% end %>
+    </div>
+<div class="d-flex justify-content-center"><div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <form method="post" action="/post">
+  <h6 class="card-subtitle mb-2 text-muted">Title:</h6>
+    <h5 class="card-title"> <textarea rows="1" cols="23" type="text" name="title" placeholder="Enter title here..."></textarea></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Post:</h6>
+    <p class="card-text"><textarea type="text" name="body" rows="10" cols="23" placeholder="Enter content here..."></textarea></p>
+ <input type ="submit" value="Add Post">
+  </div>
+  </form>
+</div></div>

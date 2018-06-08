@@ -1,0 +1,16 @@
+<div class="card">
+  <h1><h2>Username: <%= @user.username %></h1>
+  <p class="title"><h2><p>Joined: <%= @user.created_at.strftime("%b %d, %Y") %></p></h2></p>
+  <p>Name: <%= @user.firstname %> <%= @user.lastname %> </p>
+  <p>Date of Birth: <%= @user.bday %> </p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+ </div>
+ <form method="post" action="/delete">
+   <input type ="submit" value="Delete Account" style="background-color: red;">
+</form>
+
+</div>
