@@ -7,6 +7,7 @@ gem "sinatra-activerecord"
 gem "rake"
 gem "pry"
 
+
 # this will only install/run on test environments
 # group :test do
 #     gem "faker"
@@ -19,5 +20,5 @@ group :development do
 end
 
 group :production do
-   gem 'pg'
+    gem 'pg'
 end
