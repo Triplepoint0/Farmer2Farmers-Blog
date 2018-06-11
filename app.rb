@@ -58,11 +58,9 @@ post "/sign-up" do
   @user = User.create(
     username: params[:username],
     password: params[:password],
-          bday: params[:bday],
+    bday: params[:bday],
     firstname: params[:firstname],
     lastname: params[:lastname],
-      fav_artist: params[:fav_artist],
-      instrument: params[:instrument]
   )
 
   session[:user_id] = @user.id
